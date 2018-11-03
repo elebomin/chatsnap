@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--suppress ALL -->
+<configuration>
+
+    <appender name="LOGCAT" class="ch.qos.logback.classic.android.LogcatAppender">
+        <!-- Encoders are assigned the type ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+        <tagEncoder>
+            <pattern>%logger{0}</pattern>
+        </tagEncoder>
+        <encoder>
+            <pattern>[%thread] - %cn - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!--  Available Level values:
+          ALL, TRACE, DEBUG, INFO, WARN, ERROR, OFF
+    -->
+
+    <!-- Enable all logging (children override) -->
+    <root level="ALL">
+        <appender-ref ref="LOGCAT" />
+    </root>
+    
+    <!--&lt;!&ndash; SFR  &ndash;&gt;-->
+    <!--<logger name="com.sfr.android"                                                                level="ALL" />-->
+
+
+    <!--&lt;!&ndash; Support Widget based layout &ndash;&gt;-->
+    <!--<logger name="android.support.design.widget"                                                  level="INFO"/>-->
+
+    <!--&lt;!&ndash; Live app widget &ndash;&gt;-->
+    <!--<logger name="com.sfr.android.sfrsport.app.live.widget" level="OFF"/>-->
+
+    <!--&lt;!&ndash; Exo media player &ndash;&gt;-->
+    <!--<logger name="com.sfr.android.exoplayer.v2" level="ALL"/>-->
+
+</configuration>
